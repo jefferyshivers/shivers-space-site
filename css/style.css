@@ -1,0 +1,415 @@
+
+@font-face {
+  font-family: Satellite;
+  src: url("assets/Satellite.otf") format("opentype");
+}
+
+
+
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 0px;
+  background: #ee9999;
+  visiblity:hidden;
+}
+
+
+#section-text::-webkit-scrollbar-thumb {
+    visibility:hidden;
+}
+#section-text:hover::-webkit-scrollbar-thumb {
+    visibility:visible;
+}
+
+
+
+
+
+@mixin .anim {
+  transition: 0.5s;
+}
+
+
+
+
+
+
+.site-title {
+  font-size: 12pt;
+  writing-mode: tb-rl;
+  color: rgba(0,0,30,255);;
+  text-align: left;
+  -webkit-transform: rotate(180deg);
+  white-space: nowrap;
+}
+
+
+a {
+  text-decoration: none;
+  color: #818181;
+}
+a:hover {
+  color: rgba(50,200,255,255);
+}
+
+ul {
+  list-style: none;
+  list-style-position: inside;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+
+
+
+bold {
+  -webkit-text-stroke-width: 0.8px;
+}
+
+
+
+double-space {
+  line-height: 2em;
+}
+
+
+
+
+
+
+
+
+@keyframes firstload {
+    from {background-color: #eeeeee;}
+    to {background-color: #transparent;}
+}
+
+
+
+
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  min-width: 300px;
+  min-height: 400px;
+  background: #eeeeee;
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Comfortaa', sans-serif;
+}
+
+
+header,
+leftnav,
+section,
+aside,
+footer {
+  margin: 0px;
+  padding: 0px;
+}
+
+header,
+footer {
+  z-index: 2;
+  height: 50px;
+  letter-spacing: 2px;
+  width: 100%;
+  margin: 0;
+  animation-name: firstload;
+  animation-duration: 2s;
+}
+
+header {
+  clear: both;
+  position: fixed;
+  margin-top: 0;
+  background: black;
+}
+
+footer {
+  clear: both;
+  position: fixed;
+  bottom: 0;
+  float: left;
+  margin-bottom: 0;
+  background: black;
+} ul {
+  display: table;
+  margin: 0 auto;
+} ul a {
+  color: white;
+}
+
+#header-title {
+  color: #aaeeee;
+  align: middle;
+  height: 48px;
+}
+
+.topdrop {
+  color: rgba(150,220,255,1);
+  height: 0;
+  width: 100%;
+  position: fixed;
+  clear: both;
+  float: left;
+  top: 45px;
+  z-index: 1;
+  text-decoration: none;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  border-color: rgba(253, 138, 138, 1);
+  border-radius: 5px;
+  text-align: center;
+}
+
+#header-title-text {
+  transform: translate(0%, 15%);
+  color: white;
+  text-align: center;
+  font-size: 22pt;
+  margin-left: calc((100% - 300px) / 2);
+  margin-right: auto;
+  width: 300px;
+  position: absolute;
+  list-style: none;
+} ul{
+  text-align: center;
+} li {
+  font-size: 10pt;
+  letter-spacing: 2px;
+  display: inline-block;
+} li-icon {
+  top: -5px;
+  height: 50px;
+}
+
+#footer-menu {
+  float: left;
+  width: 100%;
+  height: 48px;
+  align: center;
+  overflow: hidden;
+}
+
+#footer-menu-text {
+  position: absolute;
+  display: table;
+  width: 300px;
+  margin-left: calc((100% - 300px) / 2);
+  margin-right: auto;
+  list-style: none;
+  transform: translate(0%, 100%);
+} ul li a {
+  color: white;
+  padding: 0.5em;
+  display: inline;
+  font-size: 12pt;
+}
+
+
+
+section {
+  clear: both;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#section-content-space {
+  position: absolute;
+  top: 50px;
+  float: top;
+  background: white;
+  width: 100%;
+  height: calc(100% - 100px);
+  align: center;
+  overflow: hidden;
+}
+
+#section-content-item {
+  position: absolute;
+  background: transparent;
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+#section-text {
+  width: 600px;
+  height: 100%;
+  background: blue;
+}
+
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  font-size: 12pt;
+  text-align: center;
+}
+
+.subsection {
+  background: white;
+  margin: 0;
+  clear: both;
+}
+
+
+
+
+hr {
+  width: 100%;
+  height: 4px;
+  border: none;
+  background-color: rgba(144, 208, 233, 0.4)
+}
+
+.body-content {
+  padding: 10px;
+}
+
+
+
+
+
+
+.sidenavL, .sidenavR {
+  height: calc(100% - 100px);
+  min-height: 300px;
+  width: 0;
+  clear: both;
+  position: fixed;
+  z-index: 1;
+  color: white;
+  top: 50px;
+  background-color: rgba(0,0,0,0.8);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+
+.sidenavL {
+  left: 0;
+  border-right: 1px solid rgba(144, 208, 233, 0.4);
+}
+
+#leftnav {
+  border-right: none;
+}
+
+#sidebutton:hover, .offcanvas #sidebutton:focus{
+  color: white;
+  text-shadow: 2px 2px 0px #90d0e9;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+/*@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}*/
+
+
+
+.sidenavR {
+  /*float: right;*/
+  right: 0;
+  /*border-left: 1px solid rgba(144, 208, 233, 0.4);*/
+}
+
+#rightnav {
+  border-left: none;
+}
+
+#sidebuttonR:hover, .offcanvas #sidebuttonR:focus{
+  color: white;
+  text-shadow: 2px 2px 0px #90d0e9;
+}
+
+
+
+
+
+
+
+.minitext {
+  z-index: 5;
+  display: table;
+  float: top;
+  top: 100px;
+  height: calc(100% + 10px);
+  width: 100%;
+  font-size: 14pt;
+} span {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.text {
+  padding: 8px 32px 8px 32px;
+  line-height: 1.3em;
+  font-size: 11pt;
+} ul li {
+  font-size: 10pt;
+  line-height: 1.3em;
+}
+
+
+
+
+
+
+
+/*
+  BOTTOM MENUS
+*/
+
+
+#bottom-about, #bottom-connect {
+  height: 0;
+  position: fixed;
+  clear: both;
+  float: left;
+  bottom: 45px;
+  z-index: 1;
+  background-color: rgba(0,0,0,0.9);
+  color: white;
+  text-decoration: none;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  transition: 0.5s;
+  border-color: rgba(253, 138, 138, 1);
+  border-radius: 5px;
+  border-left: 1px solid rgba(144, 208, 233, 0.4);
+  border-right: 1px solid rgba(144, 208, 233, 0.4);
+  border-top: 1px solid rgba(144, 208, 233, 0.4);
+}
+
+
+
+#bottom-about {
+  width: 420px;
+  left: calc(50% - 215px);
+}
+
+#bottom-connect {
+  width: 400px;
+  left: calc(50% - 205px);
+}
+/*
+#bottom-docs {
+  width: 440px;
+  left: calc(50% - 225px);
+}*/
