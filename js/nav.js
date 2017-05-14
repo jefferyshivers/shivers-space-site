@@ -18,7 +18,6 @@ function presentSidebars(border) {
     document.getElementById("rightnav").style.borderLeft = border;
 }
 
-
 function toggleNav() {
   if (menuOpenClose === 0) {
     // open the menu
