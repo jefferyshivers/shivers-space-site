@@ -36,8 +36,6 @@
 
 
 
-
-
 .site-title {
   font-size: 12pt;
   writing-mode: tb-rl;
@@ -45,18 +43,12 @@
   text-align: left;
   -webkit-transform: rotate(180deg);
   white-space: nowrap;
-}
-
-
-a {
+} a {
   text-decoration: none;
   color: #818181;
-}
-a:hover {
+} a:hover {
   color: rgba(50,200,255,255);
-}
-
-ul {
+} ul {
   list-style: none;
   list-style-position: inside;
   padding: 0;
@@ -118,7 +110,7 @@ footer {
 
 header,
 footer {
-  z-index: 2;
+  z-index: 20;
   height: 50px;
   letter-spacing: 2px;
   width: 100%;
@@ -162,13 +154,33 @@ footer {
   clear: both;
   float: left;
   top: 45px;
-  z-index: 1;
+  z-index: 12;
   text-decoration: none;
   overflow-x: hidden;
   overflow-y: scroll;
   border-color: rgba(253, 138, 138, 1);
   border-radius: 5px;
   text-align: center;
+}
+
+.sidenavLcurtain {
+  height: 0;
+  width: 50%;
+  position: fixed;
+  clear: both;
+  float: left;
+  top: 45px;
+  z-index: 10;
+}
+.sidenavRcurtain {
+  height: 0;
+  width: 50%;
+  position: fixed;
+  clear: both;
+  float: right;
+  top: 45px;
+  left: 50%;
+  z-index: 10;
 }
 
 #header-title-text {
@@ -181,7 +193,7 @@ footer {
   width: 300px;
   position: absolute;
   list-style: none;
-} ul{
+} ul {
   text-align: center;
 } li {
   font-size: 10pt;
@@ -305,14 +317,8 @@ hr {
   left: 0;
   border-right: 1px solid rgba(144, 208, 233, 0.4);
 }
-
 #leftnav {
   border-right: none;
-}
-
-#sidebutton:hover, .offcanvas #sidebutton:focus{
-  color: white;
-  text-shadow: 2px 2px 0px #90d0e9;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
@@ -321,27 +327,12 @@ hr {
     .sidenav a {font-size: 18px;}
 }*/
 
-
-
 .sidenavR {
-  /*float: right;*/
   right: 0;
-  /*border-left: 1px solid rgba(144, 208, 233, 0.4);*/
 }
-
 #rightnav {
   border-left: none;
 }
-
-#sidebuttonR:hover, .offcanvas #sidebuttonR:focus{
-  color: white;
-  text-shadow: 2px 2px 0px #90d0e9;
-}
-
-
-
-
-
 
 
 .minitext {
@@ -359,15 +350,12 @@ hr {
 
 .text {
   padding: 8px 32px 8px 32px;
-  line-height: 1.3em;
+  line-height: 1.5em;
   font-size: 11pt;
 } ul li {
   font-size: 10pt;
   line-height: 1.3em;
 }
-
-
-
 
 
 
@@ -383,7 +371,7 @@ hr {
   clear: both;
   float: left;
   bottom: 45px;
-  z-index: 1;
+  z-index: 11;
   background-color: rgba(0,0,0,0.9);
   color: white;
   text-decoration: none;
