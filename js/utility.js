@@ -1,4 +1,6 @@
 
+// extra utility scripts
+
 function loadContentsInit() {
   $('.sidenavR').load("content/code.html");
   $('.sidenavL').load("content/art.html");

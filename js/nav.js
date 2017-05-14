@@ -34,6 +34,10 @@ function toggleNav() {
   }
 }
 
+
+
+
+
 // fade sections out of focus
 $(document).ready(function(){
   // hover over title, show "select to toggle content", fade all
@@ -51,46 +55,64 @@ $(document).ready(function(){
      $(".sidenavRcurtain").css("height", "0px");
   });
 
+
   // hover over either side section, fade the other
+  //
+  function coverSideL() {
+    $(".sidenavLcurtain").css("height", "calc(100% - 94px)");
+    $(".sidenavLcurtain").css("background-color", "rgba(1,1,1,0.5)");
+  }
+  function coverSideR() {
+    $(".sidenavRcurtain").css("height", "calc(100% - 94px)");
+    $(".sidenavRcurtain").css("background-color", "rgba(1,1,1,0.5)");
+  }
+  function uncoverSideL() {
+    $(".sidenavLcurtain").css("height", "0px");
+  }
+  function uncoverSideR() {
+    $(".sidenavRcurtain").css("height", "0px");
+  }
+  //
   // left, fade right
   $(".sidenavL").mouseover(function(){
-     $(".sidenavRcurtain").css("height", "calc(100% - 94px)");
-     $(".sidenavRcurtain").css("background-color", "rgba(1,1,1,0.5)");
+     coverSideR();
   });
   $(".sidenavL").mouseout(function(){
-     $(".sidenavRcurtain").css("height", "0px");
+     uncoverSideR();
   });
   // right, fade left
   $(".sidenavR").mouseover(function(){
-     $(".sidenavLcurtain").css("height", "calc(100% - 94px)");
-     $(".sidenavLcurtain").css("background-color", "rgba(1,1,1,0.5)");
+     coverSideL();
   });
   $(".sidenavR").mouseout(function(){
-     $(".sidenavLcurtain").css("height", "0px");
+     uncoverSideL();
   });
+  //
+  // hover over bottom section
+  //
   // bottom about, fade left and right
   $("#bottom-about").mouseover(function(){
-     $(".sidenavLcurtain").css("height", "calc(100% - 94px)");
-     $(".sidenavLcurtain").css("background-color", "rgba(1,1,1,0.5)");
-     $(".sidenavRcurtain").css("height", "calc(100% - 94px)");
-     $(".sidenavRcurtain").css("background-color", "rgba(1,1,1,0.5)");
+     coverSideL();
+     coverSideR();
   });
   $("#bottom-about").mouseout(function(){
-     $(".sidenavLcurtain").css("height", "0px");
-     $(".sidenavRcurtain").css("height", "0px");
+     uncoverSideL();
+     uncoverSideR();
   });
   // bottom connect, fade left and right
   $("#bottom-connect").mouseover(function(){
-     $(".sidenavLcurtain").css("height", "calc(100% - 94px)");
-     $(".sidenavLcurtain").css("background-color", "rgba(1,1,1,0.5)");
-     $(".sidenavRcurtain").css("height", "calc(100% - 94px)");
-     $(".sidenavRcurtain").css("background-color", "rgba(1,1,1,0.5)");
+     coverSideL();
+     coverSideR();
   });
   $("#bottom-connect").mouseout(function(){
-     $(".sidenavLcurtain").css("height", "0px");
-     $(".sidenavRcurtain").css("height", "0px");
+     uncoverSideL();
+     uncoverSideR();
   });
 });
+
+
+
+
 
 function toggleAbout() {
   if (aboutOpenClose === 0) {
@@ -103,6 +125,9 @@ function toggleAbout() {
     aboutOpenClose = 0;
   }
 }
+
+
+
 
 function toggleConnect() {
   if (connectOpenClose === 0) {
