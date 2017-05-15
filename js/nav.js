@@ -2,6 +2,8 @@
 var menuOpenClose = 0;
 var aboutOpenClose = 0;
 var connectOpenClose = 0;
+var topdropExpired = false;
+
 
 function itemWidth(item, len) {
   document.getElementById(item).style.width = len;
@@ -25,17 +27,30 @@ function toggleNav() {
     itemWidth("rightnav", "calc(50% - 1px)");
     menuOpenClose = 1;
     presentSidebars("1px solid rgba(144, 208, 233, 0.4)");
+
+    topdropExpired = true;
+    $(".topdrop").css("height", "0");
+    $(".topdrop").css("background", "none");
+    $(".topdrop-textbg").css("height", "0");
+    $(".topdrop-textbg").css("background", "none");
+    $(".topdrop-textbg").css("border", "none");
+
   } else {
     // close the menu
     itemWidth("leftnav", "0");
     itemWidth("rightnav", "0");
     menuOpenClose = 0;
     presentSidebars("none");
+
+    topdropExpired = true;
+    $(".topdrop").css("height", "0");
+    $(".topdrop").css("background", "none");
+    $(".topdrop-textbg").css("height", "0");
+    $(".topdrop-textbg").css("background", "none");
+    $(".topdrop-textbg").css("border", "none");
+
   }
 }
-
-
-
 
 
 // fade sections out of focus
@@ -58,13 +73,15 @@ $(document).ready(function(){
 
   // hover over title, show "select to toggle content", fade all
   $("#header-title a").mouseover(function(){
-     $(".topdrop").css("height", "calc(100% - 94px)");
-     $(".topdrop").css("background-color", "rgba(1,1,1,0.3)");
-     $(".topdrop-textbg").css("height", "8em");
-     $(".topdrop-textbg").css("border", "3px solid rgba(255,255,255,0.2)");
-     $(".topdrop-textbg").css("background", "radial-gradient(rgba(0,0,0,1), rgba(0,0,0,0.8)");
-     coverSideR();
-     coverSideL();
+    if (topdropExpired === false) {
+       $(".topdrop").css("height", "calc(100% - 94px)");
+       $(".topdrop").css("background", "radial-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0))");
+       $(".topdrop-textbg").css("height", "8em");
+       $(".topdrop-textbg").css("border", "3px solid rgba(255,255,255,0.5)");
+       $(".topdrop-textbg").css("background", "radial-gradient(rgba(0,0,0,1), rgba(0,0,0,0.5))");
+       coverSideR();
+       coverSideL();
+    }
   });
   $("#header-title a").mouseout(function(){
      $(".topdrop").css("height", "0px");
@@ -72,6 +89,7 @@ $(document).ready(function(){
      $(".topdrop-textbg").css("height", "0");
      uncoverSideR();
      uncoverSideL();
+     topdropExpired = false;
   });
 
 

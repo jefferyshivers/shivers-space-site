@@ -281,8 +281,9 @@ h1 {
 }
 
 h2 {
-  font-size: 12pt;
+  font-size: 14pt;
   text-align: center;
+  line-height: 1.3em;
 }
 
 .subsection {
@@ -301,6 +302,9 @@ hr {
   background-color: rgba(144, 208, 233, 0.4);
 }
 
+br {
+  line-height: 1.3em;
+}
 
 
 .sidenavL, .sidenavR {
