@@ -7,6 +7,7 @@
 I link to content in the subdirectory 'content' to leave that stuff out of the
 template, but the divs in index may simply be populated directly.
 
+``` bash
 .
 ├── LICENSE
 ├── content  <-----------[                ]
@@ -22,3 +23,4 @@ template, but the divs in index may simply be populated directly.
 │   └── utility.js
 └── lib
     └── jquery-3.1.1.min.js
+```
