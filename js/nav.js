@@ -30,6 +30,7 @@ function toggleNav() {
 
     topdropExpired = true;
     $(".topdrop").css("height", "0");
+    $(".topdrop").css("z-index", "0");
     $(".topdrop").css("background", "none");
     $(".topdrop-textbg").css("height", "0");
     $(".topdrop-textbg").css("background", "none");
@@ -44,6 +45,7 @@ function toggleNav() {
 
     topdropExpired = true;
     $(".topdrop").css("height", "0");
+    $(".topdrop").css("z-index", "0");
     $(".topdrop").css("background", "none");
     $(".topdrop-textbg").css("height", "0");
     $(".topdrop-textbg").css("background", "none");
@@ -58,11 +60,11 @@ $(document).ready(function(){
   //
   function coverSideL() {
     $(".sidenavLcurtain").css("height", "calc(100% - 94px)");
-    $(".sidenavLcurtain").css("background-color", "rgba(1,1,1,0.8)");
+    $(".sidenavLcurtain").css("background-color", "rgba(1,1,1,0.6)");
   }
   function coverSideR() {
     $(".sidenavRcurtain").css("height", "calc(100% - 94px)");
-    $(".sidenavRcurtain").css("background-color", "rgba(1,1,1,0.8)");
+    $(".sidenavRcurtain").css("background-color", "rgba(1,1,1,0.6)");
   }
   function uncoverSideL() {
     $(".sidenavLcurtain").css("height", "0px");
@@ -75,6 +77,7 @@ $(document).ready(function(){
   $("#header-title a").mouseover(function(){
     if (topdropExpired === false) {
        $(".topdrop").css("height", "calc(100% - 94px)");
+       $(".topdrop").css("z-index", "14");
        $(".topdrop").css("background", "radial-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0))");
        $(".topdrop-textbg").css("height", "8em");
        $(".topdrop-textbg").css("border", "3px solid rgba(255,255,255,0.5)");
