@@ -301,13 +301,6 @@ hr {
   background-color: rgba(144, 208, 233, 0.4);
 }
 
-.body-content {
-  padding: 10px;
-}
-
-
-
-
 
 
 .sidenavL, .sidenavR {
@@ -375,7 +368,6 @@ hr {
 /*
   BOTTOM MENUS
 */
-
 
 #bottom-about, #bottom-connect {
   height: 0;
