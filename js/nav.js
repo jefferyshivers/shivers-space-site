@@ -55,16 +55,19 @@ function toggleNav() {
 }
 
 
+
+
+
 // fade sections out of focus
 $(document).ready(function(){
   //
   function coverSideL() {
     $(".sidenavLcurtain").css("height", "calc(100% - 94px)");
-    $(".sidenavLcurtain").css("background-color", "rgba(1,1,1,0.6)");
+    $(".sidenavLcurtain").css("background-color", "rgba(1,1,1,0.75)");
   }
   function coverSideR() {
     $(".sidenavRcurtain").css("height", "calc(100% - 94px)");
-    $(".sidenavRcurtain").css("background-color", "rgba(1,1,1,0.6)");
+    $(".sidenavRcurtain").css("background-color", "rgba(1,1,1,0.75)");
   }
   function uncoverSideL() {
     $(".sidenavLcurtain").css("height", "0px");
@@ -78,7 +81,7 @@ $(document).ready(function(){
     if (topdropExpired === false) {
        $(".topdrop").css("height", "calc(100% - 94px)");
        $(".topdrop").css("z-index", "14");
-       $(".topdrop").css("background", "radial-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0))");
+       $(".topdrop").css("background", "radial-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0))");
        $(".topdrop-textbg").css("height", "8em");
        $(".topdrop-textbg").css("border", "3px solid rgba(255,255,255,0.5)");
        $(".topdrop-textbg").css("background", "radial-gradient(rgba(0,0,0,1), rgba(0,0,0,0.5))");

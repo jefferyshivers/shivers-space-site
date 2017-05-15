@@ -9,9 +9,10 @@ function loadContentsInit() {
   $('#bottom-connect').load("content/connect.html");
 }
 
-// adapt embedded iframe height to width
-function adaptIframe() {
-  $('.embedded-iframe').css("height", "500px");
-  // loop
-  // adaptIframe();
-}
+
+// $(document).ready(function(){
+//   // adapt embedded iframe height to width
+//   $('.embedded-iframe').css("height", "200px");
+//     // loop
+//     // adaptIframe();
+// });
