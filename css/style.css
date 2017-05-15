@@ -154,7 +154,7 @@ footer {
   clear: both;
   float: left;
   top: 45px;
-  z-index: 13;
+  z-index: 14;
   text-decoration: none;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -164,12 +164,15 @@ footer {
 }
 
 .topdrop-textbg {
-  width: 10em;
+  width: 20em;
   height: 0em;
   position: fixed;
   clear: both;
-  float: center;
-  z-index: 12;
+  top: calc(50% - 4em);
+  left: calc(50% - (10em + 3px));
+  margin: auto 0;
+  z-index: 13;
+  border-radius: 2em;
 }
 
 .sidenavLcurtain {
@@ -398,12 +401,12 @@ hr {
 
 #bottom-about {
   width: 420px;
-  left: calc(50% - 215px);
+  left: calc(50% - 210px);
 }
 
 #bottom-connect {
   width: 400px;
-  left: calc(50% - 205px);
+  left: calc(50% - 200px);
 }
 /*
 #bottom-docs {

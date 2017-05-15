@@ -40,31 +40,14 @@ function toggleNav() {
 
 // fade sections out of focus
 $(document).ready(function(){
-  // hover over title, show "select to toggle content", fade all
-  $("#header-title a").mouseover(function(){
-     $(".topdrop").css("height", "calc(100% - 94px)");
-     $(".topdrop").css("background-color", "rgba(1,1,1,0.5)");
-     $(".sidenavLcurtain").css("height", "calc(100% - 94px)");
-     $(".sidenavLcurtain").css("background-color", "rgba(1,1,1,0.5)");
-     $(".sidenavRcurtain").css("height", "calc(100% - 94px)");
-     $(".sidenavRcurtain").css("background-color", "rgba(1,1,1,0.5)");
-  });
-  $("#header-title a").mouseout(function(){
-     $(".topdrop").css("height", "0px");
-     $(".sidenavLcurtain").css("height", "0px");
-     $(".sidenavRcurtain").css("height", "0px");
-  });
-
-
-  // hover over either side section, fade the other
   //
   function coverSideL() {
     $(".sidenavLcurtain").css("height", "calc(100% - 94px)");
-    $(".sidenavLcurtain").css("background-color", "rgba(1,1,1,0.5)");
+    $(".sidenavLcurtain").css("background-color", "rgba(1,1,1,0.8)");
   }
   function coverSideR() {
     $(".sidenavRcurtain").css("height", "calc(100% - 94px)");
-    $(".sidenavRcurtain").css("background-color", "rgba(1,1,1,0.5)");
+    $(".sidenavRcurtain").css("background-color", "rgba(1,1,1,0.8)");
   }
   function uncoverSideL() {
     $(".sidenavLcurtain").css("height", "0px");
@@ -72,6 +55,27 @@ $(document).ready(function(){
   function uncoverSideR() {
     $(".sidenavRcurtain").css("height", "0px");
   }
+
+  // hover over title, show "select to toggle content", fade all
+  $("#header-title a").mouseover(function(){
+     $(".topdrop").css("height", "calc(100% - 94px)");
+     $(".topdrop").css("background-color", "rgba(1,1,1,0.3)");
+     $(".topdrop-textbg").css("height", "8em");
+     $(".topdrop-textbg").css("border", "3px solid rgba(255,255,255,0.2)");
+     $(".topdrop-textbg").css("background", "radial-gradient(rgba(0,0,0,1), rgba(0,0,0,0.8)");
+     coverSideR();
+     coverSideL();
+  });
+  $("#header-title a").mouseout(function(){
+     $(".topdrop").css("height", "0px");
+     $(".topdrop-textbg").css("border", "none");
+     $(".topdrop-textbg").css("height", "0");
+     uncoverSideR();
+     uncoverSideL();
+  });
+
+
+  // hover over either side section, fade the other
   //
   // left, fade right
   $(".sidenavL").mouseover(function(){
@@ -114,6 +118,8 @@ $(document).ready(function(){
 
 
 
+// bottom sections
+// "about"
 function toggleAbout() {
   if (aboutOpenClose === 0) {
     itemHeight("bottom-about", "60%");
@@ -125,10 +131,7 @@ function toggleAbout() {
     aboutOpenClose = 0;
   }
 }
-
-
-
-
+// "connect"
 function toggleConnect() {
   if (connectOpenClose === 0) {
     itemHeight("bottom-connect", "60%");
