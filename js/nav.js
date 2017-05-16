@@ -50,7 +50,6 @@ function toggleNav() {
     $(".topdrop-textbg").css("height", "0");
     $(".topdrop-textbg").css("background", "none");
     $(".topdrop-textbg").css("border", "none");
-
   }
 }
 
@@ -81,10 +80,12 @@ $(document).ready(function(){
     if (topdropExpired === false) {
        $(".topdrop").css("height", "calc(100% - 94px)");
        $(".topdrop").css("z-index", "14");
-       $(".topdrop").css("background", "radial-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0))");
+       $(".topdrop").css("background",
+            "radial-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.6), rgba(0,0,0,0))");
        $(".topdrop-textbg").css("height", "8em");
        $(".topdrop-textbg").css("border", "3px solid rgba(255,255,255,0.5)");
-       $(".topdrop-textbg").css("background", "radial-gradient(rgba(0,0,0,1), rgba(0,0,0,0.5))");
+       $(".topdrop-textbg").css("background",
+            "radial-gradient(rgba(0,0,0,1), rgba(0,0,0,0.5))");
        coverSideR();
        coverSideL();
     }

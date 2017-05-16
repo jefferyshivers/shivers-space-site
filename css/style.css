@@ -89,14 +89,16 @@ double-space {
 
 html,
 body {
-  height: 100%;
-  width: 100%;
+  height: 100%vh;
+  width: 100%vw;
   min-width: 300px;
   min-height: 400px;
   background: #eeeeee;
   margin: 0px;
   padding: 0px;
   font-family: 'Comfortaa', sans-serif;
+  /*font-weight: 50;*/
+  color: white;
 }
 
 
@@ -261,7 +263,7 @@ section {
   overflow: hidden;
 }
 
-#section-content-item {
+/*#section-content-item {
   position: absolute;
   background: transparent;
   width: 300px;
@@ -274,7 +276,7 @@ section {
   width: 600px;
   height: 100%;
   background: blue;
-}
+}*/
 
 
 h1 {

@@ -1,10 +1,10 @@
 # shivers.space
 
-- a SPA website template, demo'd at shivers.space and created by Jeffery Shivers
+a SPA template, demo'd at (shivers.space)[http://shivers.space] and created by Jeffery Shivers
 
 ---
 
-I link to content in the subdirectory 'content' to leave that stuff out of the
+I link to content in the so named subdirectory to leave that stuff out of the
 template, but the divs in index may simply be populated directly.
 
 ``` bash
