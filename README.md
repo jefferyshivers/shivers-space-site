@@ -1,6 +1,6 @@
 # shivers.space
 
-a SPA template, demo'd at (shivers.space)[http://shivers.space] and created by Jeffery Shivers
+a SPA template, created by Jeffery Shivers and demo'd at [shivers.space](http://shivers.space)
 
 ---
 
