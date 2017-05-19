@@ -1,4 +1,6 @@
 
+@import "bourbon/bourbon";
+
 @font-face {
   font-family: Satellite;
   src: url("assets/Satellite.otf") format("opentype");
@@ -30,7 +32,7 @@
 
 
 @mixin .anim {
-  transition: 0.5s;
+  transition: 5s;
 }
 
 
@@ -91,7 +93,7 @@ html,
 body {
   height: 100%vh;
   width: 100%vw;
-  min-width: 300px;
+  min-width: 200px;
   min-height: 400px;
   background: #eeeeee;
   margin: 0px;
@@ -185,6 +187,7 @@ footer {
   clear: both;
   float: left;
   top: 45px;
+  left: calc(50% - 10px);
   z-index: 10;
 }
 .sidenavRcurtain {
@@ -194,7 +197,7 @@ footer {
   clear: both;
   float: right;
   top: 45px;
-  left: 50%;
+  left: calc(50% + 10px);
   z-index: 10;
 }
 
@@ -329,16 +332,22 @@ br {
   top: 50px;
   background-color: rgba(0,0,0,0.9);
   overflow-x: hidden;
-  transition: 0.5s;
+  transition: 2s;
 }
 
 
 .sidenavL {
-  left: 0;
-  border-right: 1px solid rgba(144, 208, 233, 0.4);
+  /*left: 0;*/
+  /*left: calc(50% - 505px);*/
+  right: calc(50% + 10px);
+  max-width: 500px;
+  /*border-left: 1px solid rgba(144, 208, 233, 0.4);*/
+  /*border-right: 1px solid rgba(144, 208, 233, 0.4);*/
 }
 #leftnav {
   border-right: none;
+  color: transparent;
+  /*transition: 2s;*/
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
@@ -348,7 +357,12 @@ br {
 }*/
 
 .sidenavR {
-  right: 0;
+  /*right: 0;*/
+  /*right: calc(-50% + 500px);*/
+  left: calc(50% + 10px);
+  max-width: 500px;
+  /*border-left: 1px solid rgba(144, 208, 233, 0.4);*/
+  /*border-right: 1px solid rgba(144, 208, 233, 0.4);*/
 }
 #rightnav {
   border-left: none;

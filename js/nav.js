@@ -17,6 +17,8 @@ function presentSidebars(border) {
   itemHeight("bottom-connect", "0");
     connectOpenClose = 0;
     document.getElementById("leftnav").style.borderRight = border;
+    document.getElementById("leftnav").style.borderLeft = border;
+    document.getElementById("rightnav").style.borderRight = border;
     document.getElementById("rightnav").style.borderLeft = border;
 }
 
@@ -27,6 +29,9 @@ function toggleNav() {
     itemWidth("rightnav", "calc(50% - 1px)");
     menuOpenClose = 1;
     presentSidebars("1px solid rgba(144, 208, 233, 0.4)");
+    // text color
+    document.getElementById("leftnav").style.color = "white";
+    document.getElementById("rightnav").style.color = "white";
 
     topdropExpired = true;
     $(".topdrop").css("height", "0");
@@ -42,6 +47,9 @@ function toggleNav() {
     itemWidth("rightnav", "0");
     menuOpenClose = 0;
     presentSidebars("none");
+    // text color
+    document.getElementById("leftnav").style.color = "transparent";
+    document.getElementById("rightnav").style.color = "transparent";
 
     topdropExpired = true;
     $(".topdrop").css("height", "0");
@@ -62,11 +70,11 @@ $(document).ready(function(){
   //
   function coverSideL() {
     $(".sidenavLcurtain").css("height", "calc(100% - 94px)");
-    $(".sidenavLcurtain").css("background-color", "rgba(1,1,1,0.75)");
+    // $(".sidenavLcurtain").css("background-color", "rgba(1,1,1,0.75)");
   }
   function coverSideR() {
     $(".sidenavRcurtain").css("height", "calc(100% - 94px)");
-    $(".sidenavRcurtain").css("background-color", "rgba(1,1,1,0.75)");
+    // $(".sidenavRcurtain").css("background-color", "rgba(1,1,1,0.75)");
   }
   function uncoverSideL() {
     $(".sidenavLcurtain").css("height", "0px");
